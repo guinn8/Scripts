@@ -24,7 +24,7 @@ end
 target remote localhost:2331
 set mem inaccessible-by-default off
 set pagination off
-load-quiet
+#load-quiet
 #b main
 
 set {int}0x400AC044=0

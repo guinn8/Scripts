@@ -1,0 +1,5 @@
+r
+h
+loadfile /home/guinn8/Code/human-id/build/proto-d/bin/sense-gi-signed.bin 0x60100000
+r
+exit
