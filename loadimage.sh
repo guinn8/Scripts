@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+SCRIPT_DIR=~/Scripts
 
 AXF_FILE=$1
 BIN_FILE=$2
@@ -15,8 +15,10 @@ loadfile $BIN_FILE 0x60800000
 r
 exit" > $JLINK_FILE
 
+echo $JLINK_FILE
 
-source $SCRIPT_DIR/sense_jlink.sh $SCRIPT_DIR/temp.jlink
+source $SCRIPT_DIR/sense_jlink.sh 
+rm $JLINKFILE
 
-# tmux new-session -d $CMD_STR
-# source $SCRIPT_DIR/tmux_console.sh
+tmux new-session -d $CMD_STR
+source $SCRIPT_DIR/tmux_console.sh
