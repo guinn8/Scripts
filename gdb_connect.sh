@@ -1,16 +1,15 @@
 #!/bin/bash
 
-# Copyright (c) 2022 Simply Embedded Inc.
+# Copyright (c) 2023 Simply Embedded Inc.
 # All Rights Reserved.
 #
 # File: gdb_connect.sh
 # Brief: Launches gdb server and connects to it, reads uart tty output
 # args:
 #   AXF_FILE: Load symbols from this file
-#   
-
 
 AXF_FILE=$1
+
 GDB_FILE=~/Scripts/device.gdb
 TTY_DEV=/dev/ttyACM0
 
@@ -23,15 +22,7 @@ tmux resize-pane -t 1 -y 10
 tmux set remain-on-exit on
 
 # https://wiki.segger.com/J-Link_GDB_Server#Command_line_options
-tmux split-window -h -f 'killall JLinkGDBServerCLExe; \
-                     JLinkGDBServerCLExe -select USB \
-                    -endian little \
-                    -speed auto \
-                    -device MIMXRT1021XXX5A \
-                    -if SWD \
-                    -rtos GDBServer/RTOSPlugin_FreeRTOS \
-                    -halt -vd -noir -nogui\
-                    -singlerun'
+tmux split-window -h -f "source ~/Scripts/gdb_server.sh"
 tmux resize-pane -t 2 -x 20
 tmux set remain-on-exit on
 

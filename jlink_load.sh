@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Copyright (c) 2022 Simply Embedded Inc.
+# Copyright (c) 2023 Simply Embedded Inc.
 # All Rights Reserved.
 #
 # File: jlink_load.sh
