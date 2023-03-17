@@ -1,16 +1,26 @@
+#!/bin/bash
+
+# Copyright (c) 2022 Simply Embedded Inc.
+# All Rights Reserved.
+#
+# File: gdb_connect.sh
+# Brief: Launches gdb server and connects to it, reads uart tty output
+# args:
+#   AXF_FILE: Load symbols from this file
+#   
+
+
 AXF_FILE=$1
-GDB_FILE=~/Scripts/d.gdb
+GDB_FILE=~/Scripts/device.gdb
+TTY_DEV=/dev/ttyACM0
 
 # TODO(Gavin): The sleep wait for the gdb server to init
 tmux new-session -d "sleep 2 && arm-none-eabi-gdb $AXF_FILE -x $GDB_FILE -q"
-
 tmux set remain-on-exit on
-tmux split-window -v '  export TTY_DEV=/dev/ttyACM0; \
-                        echo "Attempting to killall open screen processes"; \
-                        killall screen; \
-                        echo "Attempting to connect to $TTY_DEV"; \
-                        screen $TTY_DEV 115200'
+
+tmux split-window -v " killall screen && screen $TTY_DEV 115200"
 tmux resize-pane -t 1 -y 10
+tmux set remain-on-exit on
 
 # https://wiki.segger.com/J-Link_GDB_Server#Command_line_options
 tmux split-window -h -f 'killall JLinkGDBServerCLExe; \
