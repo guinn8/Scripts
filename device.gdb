@@ -1,3 +1,12 @@
+define gi
+    monitor reset
+    file /home/guinn8/SimplyEmbedded/human-id/bootloader/build/proto-d/bin/bootloader.axf
+    b /home/guinn8/SimplyEmbedded/human-id/bootloader/main.c:134
+    c
+    j *gi_reset_vector
+    file /home/guinn8/SimplyEmbedded/human-id/build/proto-d/bin/sense-gi-cli.axf
+end
+
 target remote localhost:2331
 set mem inaccessible-by-default off
 
@@ -18,3 +27,4 @@ paths = subprocess.check_output('python2.7 -c "import os,sys;print(os.linesep.jo
 # Extend GDB's Python's search path
 sys.path.extend(paths)
 end
+
