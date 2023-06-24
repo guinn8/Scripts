@@ -14,10 +14,10 @@ GDB_FILE=~/Scripts/device.gdb
 TTY_DEV=/dev/ttyACM0
 
 # TODO(Gavin): The sleep wait for the gdb server to init
-tmux new-session -d "sleep 2 && arm-none-eabi-gdb $AXF_FILE -x $GDB_FILE -q"
+tmux new-session -d "sleep 2 && arm-none-eabi-gdb-py $AXF_FILE -x $GDB_FILE -q"
 tmux set remain-on-exit on
 
-tmux split-window -v " killall screen || true && screen $TTY_DEV 115200"
+tmux split-window -v "killall screen || true && screen $TTY_DEV 115200"
 tmux resize-pane -t 1 -y 10
 tmux set remain-on-exit on
 
