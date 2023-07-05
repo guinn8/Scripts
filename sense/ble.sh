@@ -1,1 +1,1 @@
-source ~/Scripts/jlink_load.sh /home/guinn8/Downloads/fw_release/artifacts/rtls/rtls_v1/device/bin/merged.hex "" NRF52833_XXAA
+source ~/Scripts/jlink_load.sh /home/guinn8/Downloads/artifacts/rtls/rtls_v1/device/bin/merged.hex "" NRF52833_XXAA
