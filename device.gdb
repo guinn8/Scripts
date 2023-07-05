@@ -1,11 +1,33 @@
-define gi
-    monitor reset
-    file /home/guinn8/SimplyEmbedded/human-id/bootloader/build/proto-d/bin/bootloader.axf
-    b /home/guinn8/SimplyEmbedded/human-id/bootloader/main.c:134
-    c
-    j *gi_reset_vector
-    file /home/guinn8/SimplyEmbedded/human-id/build/proto-d/bin/sense-gi-cli.axf
+python
+import gdb
+import os
+
+class GiCommand(gdb.Command):
+    "Implements the 'gi' command."
+
+    def __init__(self):
+        super(GiCommand, self).__init__("gi", gdb.COMMAND_USER)
+
+    def invoke(self, arg, from_tty):
+        PROJ_ROOT="/home/guinn8/SimplyEmbedded/human-id"
+        CROSS_COMPILE="arm-none-eabi-"
+        TARGET="proto-d"
+        
+        # Running the make command
+        os.system('CROSS_COMPILE={} TARGET={} make -C {}/bootloader -j'.format(CROSS_COMPILE, TARGET, PROJ_ROOT))
+        
+        gdb.execute("monitor reset")
+        gdb.execute("file {}/bootloader/build/proto-d/bin/bootloader.axf".format(PROJ_ROOT))
+        gdb.Breakpoint("{}/bootloader/main.c:134".format(PROJ_ROOT))
+        gdb.execute("continue")
+        gdb.execute("set confirm off")
+        gdb.execute("jump *gi_reset_vector")
+        gdb.execute("set confirm on")
+        gdb.execute("file {}/build/proto-d/bin/sense-gi-cli.axf".format(PROJ_ROOT))
+
+GiCommand()
 end
+
 
 target remote localhost:2331
 set mem inaccessible-by-default off
