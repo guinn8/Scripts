@@ -5,6 +5,7 @@ set {int}0x400AC044=0
 set {int}0x400AC040=0x00200003
 set {int}0x400AC038=0x00aa0000
 monitor reset
+c
 
 python
 # Update GDB's Python paths with the `sys.path` values of the local
