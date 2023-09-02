@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CROSS_COMPILE=arm-none-eabi- TARGET=proto-d BUILD_FLAG=release make id-app-sign -j
+CROSS_COMPILE=arm-none-eabi- TARGET=proto-d BUILD_FLAG=dev make id-app-sign -j
 
 # Exit if compilation fails
 if [ $? == 0 ]; then
