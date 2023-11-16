@@ -15,5 +15,5 @@ if [ -z "$CMD_FILE" ]
     then
         JLinkExe -Si swd -speed adaptive -AutoConnect 1 -Device $DEV_ID -NoGui 1
     else
-        JLinkExe -Si swd -speed auto -AutoConnect 1 -Device $DEV_ID -CommandFile $CMD_FILE -NoGui 1
+        JLinkExe -Si swd -speed 16000 -AutoConnect 1 -Device $DEV_ID -CommandFile $CMD_FILE -NoGui 1
 fi
