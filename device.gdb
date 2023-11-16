@@ -2,7 +2,11 @@ define gi
     j *0x6010499d
 end
 
+define app
+    j *0x6080499d
+end
 
+ 
 target remote localhost:2331
 set mem inaccessible-by-default off
 
