@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CROSS_COMPILE=arm-none-eabi- TARGET=proto-d BUILD_FLAG=dev make gw-app-sign -j
+CROSS_COMPILE=arm-none-eabi- TARGET=proto-d BUILD_FLAG=dev APP_TARGET=gw-app make app-sign -j
 
 # Exit if compilation fails
 if [ $? == 0 ]; then
@@ -10,5 +10,5 @@ else
     exit 1
 fi
 
-source ~/Scripts/jlink_load.sh build/proto-d/bin/sense-gw-signed.bin 0x60800000
-source ~/Scripts/gdb_connect.sh build/proto-d/bin/sense-gw.axf
+source ~/Scripts/jlink_load.sh build/proto-d/bin/gw-app-signed.bin 0x60800000
+source ~/Scripts/gdb_connect.sh build/proto-d/bin/gw-app.axf
