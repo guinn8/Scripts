@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "vbus-tap",
+  "revision": "1",
+  "badge": "PART REUSE EXAMPLE",
+  "title": "USB 5 V breakout.",
+  "subtitle": "One mini breadboard / the same PCA10059 part definition",
+  "strapline": "A small second circuit demonstrates reuse without changing the renderer.",
+  "canvas": [1700, 1770],
+  "boards": [{"id": "L", "part": "olimex-mini", "origin": [440, 845], "pitch": 26, "label": "L / POWER TAP"}],
+  "instances": [{"id": "nrf", "part": "nordic-pca10059", "board": "L"}],
+  "wires": [
+    {"id": "W1", "label": "USB 5 V tap", "from": "L:B17", "to": "L:A1", "via": [[365, 1261], [365, 845]], "color": "#C45524", "width": 5, "pins": "VBUS > spare row 1", "group": "jumpers"},
+    {"id": "W2", "label": "Ground tap", "from": "L:B15", "to": "L:A2", "via": [[345, 1209], [345, 871]], "color": "#42586B", "width": 5, "pins": "GND > spare row 2", "group": "jumpers"}
+  ],
+  "passives": [],
+  "power_sources": [{"id": "usb", "connector": "nrf USB-A", "net": "USB_5V", "nominal_volts": 5}],
+  "expected_nets": {"nrf.GND_A": "GND", "nrf.GND_B": "GND", "nrf.GND_C": "GND", "nrf.VBUS": "USB_5V", "nrf.VDD_OUT": "LOGIC_VDD", "L:A1": "USB_5V", "L:A2": "GND"},
+  "required_connections": [["nrf.VBUS", "L:A1"], ["nrf.GND_B", "L:A2"]],
+  "sidebar": [
+    {"type": "text", "y": 285, "title": "REUSE EXAMPLE", "lines": ["The same Nordic and mini-board definitions", "support a second circuit with no renderer edits.", "Row 1 carries USB 5 V; row 2 carries ground.", "Supply current limits still apply to any load."]},
+    {"type": "wire_table", "y": 470, "title": "TWO JUMPERS", "group": "jumpers", "row_height": 68}
+  ],
+  "footer_cards": [],
+  "bench_unknowns": ["Actual USB source current budget", "Physical jumper and header fit"],
+  "sources": [],
+  "origin_note": "A small independent example for library reuse, not an additional slider requirement."
+}

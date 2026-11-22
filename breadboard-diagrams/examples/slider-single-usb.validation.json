@@ -1,0 +1,27 @@
+{
+  "result": "pass",
+  "boards": 2,
+  "module_header_pins_checked": 36,
+  "wires_checked": 12,
+  "occupied_holes_checked": 57,
+  "required_connection_groups_checked": 10,
+  "checks": [
+    "all exposed header pins",
+    "breadboard strip connectivity",
+    "unique hole occupancy",
+    "intended net separation",
+    "required paths",
+    "passives not treated as shorts",
+    "drawing route bounds",
+    "one declared power source"
+  ],
+  "not_verified": [
+    "Actual motor startup/stall current and USB port/supply budget",
+    "VBUS / VM droop, noise and MCU resets during motor switching",
+    "VDD OUT with the installed firmware; driver VCC must be at least 2.7 V",
+    "Actual header fit, lead routing and USB extension clearance",
+    "Pot terminal identity and motor polarity",
+    "No firmware or hardware test has been performed by this renderer"
+  ],
+  "source_sha256": "fb457d304e21579187c2142ae0b0e679f8cb47718822063e9f3be9193d5538b2"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "adafruit-tb6612-2448",
+  "kind": "module",
+  "title": "TB6612",
+  "subtitle": "Adafruit 2448",
+  "fill": "#21465D",
+  "headers": [
+    {"column": "C", "start_row": 10, "pins": ["AOUT1", "AOUT2", "GND_A", "GND_B", "BOUT2", "BOUT1"]},
+    {"column": "G", "start_row": 8, "pins": ["PWMA", "AIN2", "AIN1", "STBY", "BIN1", "BIN2", "PWMB", "GND_C", "VCC", "VM"]}
+  ],
+  "internal_nets": [["GND_A", "GND_B", "GND_C"]],
+  "onboard_resistors": [{"a": "STBY", "b": "VCC", "ohms": 10000}],
+  "source": "https://github.com/adafruit/Adafruit-TB6612-Motor-Driver-Breakout-PCB/blob/master/Adafruit%20TB6612.brd",
+  "source_blob_sha": "17df1afba1d4e98543dde18b57d9bcaed180659d",
+  "notes": "VM end down. JP1 10-way and JP3 6-way headers are 15.24 mm apart. Pin order checked against manufacturer Eagle contactrefs. Separate offset motor-power pads remain empty. VCC must be 2.7-5.5 V; VM is the motor supply."
+}

@@ -1,0 +1,547 @@
+{
+  "schema_version": 1,
+  "id": "slider-single-usb",
+  "revision": "7",
+  "title": "One USB. The whole slider.",
+  "subtitle": "Nordic PCA10059 + TB6612 + motorized fader",
+  "strapline": "USB powers the dongle. Its VBUS pad feeds the motor driver.",
+  "canvas": [
+    1700,
+    1770
+  ],
+  "boards": [
+    {
+      "id": "U",
+      "part": "olimex-mini",
+      "origin": [
+        440,
+        300
+      ],
+      "pitch": 26,
+      "label": "U / MOTOR DRIVER"
+    },
+    {
+      "id": "L",
+      "part": "olimex-mini",
+      "origin": [
+        440,
+        845
+      ],
+      "pitch": 26,
+      "label": "L / USB DONGLE"
+    }
+  ],
+  "instances": [
+    {
+      "id": "driver",
+      "part": "adafruit-tb6612-2448",
+      "board": "U"
+    },
+    {
+      "id": "nrf",
+      "part": "nordic-pca10059",
+      "board": "L"
+    },
+    {
+      "id": "fader",
+      "part": "adafruit-fader-5466",
+      "origin": [
+        95,
+        280
+      ],
+      "size": [
+        145,
+        1030
+      ],
+      "ports": {
+        "M1": [
+          240,
+          534
+        ],
+        "M2": [
+          240,
+          560
+        ],
+        "WIPER": [
+          240,
+          1150
+        ],
+        "POT_LOW": [
+          240,
+          1186
+        ],
+        "POT_HIGH": [
+          240,
+          1222
+        ],
+        "TOUCH": [
+          95,
+          1280
+        ]
+      }
+    }
+  ],
+  "wires": [
+    {
+      "id": "W1",
+      "label": "USB 5 V",
+      "from": "L:B17",
+      "to": "U:J17",
+      "color": "#C45524",
+      "width": 6,
+      "via": [
+        [
+          365,
+          1261
+        ],
+        [
+          365,
+          748
+        ],
+        [
+          804,
+          748
+        ],
+        [
+          804,
+          716
+        ]
+      ],
+      "badge": [
+        751,
+        716
+      ],
+      "pins": "VBUS > VMotor",
+      "group": "jumpers"
+    },
+    {
+      "id": "W2",
+      "label": "Logic supply",
+      "from": "L:B16",
+      "to": "U:J16",
+      "color": "#17836D",
+      "width": 5,
+      "via": [
+        [
+          390,
+          1235
+        ],
+        [
+          390,
+          774
+        ],
+        [
+          780,
+          774
+        ],
+        [
+          780,
+          690
+        ]
+      ],
+      "badge": [
+        751,
+        690
+      ],
+      "pins": "VDD OUT > VCC",
+      "group": "jumpers"
+    },
+    {
+      "id": "W3",
+      "label": "Common ground",
+      "from": "L:B15",
+      "to": "U:B12",
+      "color": "#42586B",
+      "width": 5,
+      "via": [
+        [
+          345,
+          1209
+        ],
+        [
+          345,
+          586
+        ]
+      ],
+      "badge": [
+        345,
+        920
+      ],
+      "pins": "GND > GND",
+      "group": "jumpers"
+    },
+    {
+      "id": "W4",
+      "label": "PWM",
+      "from": "L:J13",
+      "to": "U:J8",
+      "color": "#2B5DA8",
+      "width": 4,
+      "via": [
+        [
+          846,
+          1157
+        ],
+        [
+          846,
+          482
+        ]
+      ],
+      "badge": [
+        794,
+        482
+      ],
+      "pins": "P0.22 > PWMA",
+      "group": "jumpers"
+    },
+    {
+      "id": "W5",
+      "label": "Direction 2",
+      "from": "L:J14",
+      "to": "U:J9",
+      "color": "#2B5DA8",
+      "width": 4,
+      "via": [
+        [
+          870,
+          1183
+        ],
+        [
+          870,
+          508
+        ]
+      ],
+      "badge": [
+        794,
+        508
+      ],
+      "pins": "P0.20 > AIN2",
+      "group": "jumpers"
+    },
+    {
+      "id": "W6",
+      "label": "Direction 1",
+      "from": "L:J16",
+      "to": "U:J10",
+      "color": "#2B5DA8",
+      "width": 4,
+      "via": [
+        [
+          894,
+          1235
+        ],
+        [
+          894,
+          534
+        ]
+      ],
+      "badge": [
+        794,
+        534
+      ],
+      "pins": "P0.15 > AIN1",
+      "group": "jumpers"
+    },
+    {
+      "id": "W7",
+      "label": "Enable",
+      "from": "L:J17",
+      "to": "U:J11",
+      "color": "#2B5DA8",
+      "width": 4,
+      "via": [
+        [
+          918,
+          1261
+        ],
+        [
+          918,
+          560
+        ]
+      ],
+      "badge": [
+        794,
+        560
+      ],
+      "pins": "P0.13 > STBY",
+      "group": "jumpers"
+    },
+    {
+      "id": "F1",
+      "label": "Motor M1",
+      "from": "fader.M1",
+      "to": "U:A10",
+      "color": "#89417D",
+      "width": 5,
+      "pins": "Motor terminal 1 > AOUT1",
+      "group": "pigtails"
+    },
+    {
+      "id": "F2",
+      "label": "Motor M2",
+      "from": "fader.M2",
+      "to": "U:A11",
+      "color": "#89417D",
+      "width": 5,
+      "pins": "Motor terminal 2 > AOUT2",
+      "group": "pigtails"
+    },
+    {
+      "id": "F3",
+      "label": "B / WIPER",
+      "from": "fader.WIPER",
+      "to": "L:A12",
+      "color": "#17836D",
+      "width": 5,
+      "via": [
+        [
+          290,
+          1150
+        ],
+        [
+          290,
+          1131
+        ]
+      ],
+      "pins": "Wiper > P0.02 / AIN0",
+      "group": "pigtails"
+    },
+    {
+      "id": "F4",
+      "label": "A / POT-",
+      "from": "fader.POT_LOW",
+      "to": "L:A15",
+      "color": "#42586B",
+      "width": 5,
+      "via": [
+        [
+          315,
+          1186
+        ],
+        [
+          315,
+          1209
+        ]
+      ],
+      "pins": "Pot end > GND",
+      "group": "pigtails"
+    },
+    {
+      "id": "F5",
+      "label": "C / POT+",
+      "from": "fader.POT_HIGH",
+      "to": "L:A16",
+      "color": "#17836D",
+      "width": 5,
+      "via": [
+        [
+          340,
+          1222
+        ],
+        [
+          340,
+          1235
+        ]
+      ],
+      "pins": "Pot end > VDD OUT",
+      "group": "pigtails"
+    }
+  ],
+  "passives": [
+    {
+      "id": "R1",
+      "kind": "resistor",
+      "ohms": 2200,
+      "a": "U:I11",
+      "b": "U:I15",
+      "required_between": [
+        "driver.STBY",
+        "driver.GND_C"
+      ],
+      "color": "#737E47"
+    }
+  ],
+  "power_sources": [
+    {
+      "id": "usb",
+      "connector": "nrf USB-A",
+      "net": "USB_5V",
+      "nominal_volts": 5
+    }
+  ],
+  "expected_nets": {
+    "nrf.GND_A": "GND",
+    "nrf.GND_B": "GND",
+    "nrf.GND_C": "GND",
+    "driver.GND_A": "GND",
+    "driver.GND_B": "GND",
+    "driver.GND_C": "GND",
+    "fader.POT_LOW": "GND",
+    "nrf.VBUS": "USB_5V",
+    "driver.VM": "USB_5V",
+    "nrf.VDD_OUT": "LOGIC_VDD",
+    "driver.VCC": "LOGIC_VDD",
+    "fader.POT_HIGH": "LOGIC_VDD",
+    "nrf.P0.02": "POSITION",
+    "fader.WIPER": "POSITION",
+    "nrf.P0.22": "PWM",
+    "driver.PWMA": "PWM",
+    "nrf.P0.20": "DIRECTION_2",
+    "driver.AIN2": "DIRECTION_2",
+    "nrf.P0.15": "DIRECTION_1",
+    "driver.AIN1": "DIRECTION_1",
+    "nrf.P0.13": "ENABLE",
+    "driver.STBY": "ENABLE",
+    "driver.AOUT1": "MOTOR_1",
+    "fader.M1": "MOTOR_1",
+    "driver.AOUT2": "MOTOR_2",
+    "fader.M2": "MOTOR_2"
+  },
+  "required_connections": [
+    [
+      "nrf.VBUS",
+      "driver.VM"
+    ],
+    [
+      "nrf.VDD_OUT",
+      "driver.VCC",
+      "fader.POT_HIGH"
+    ],
+    [
+      "nrf.GND_A",
+      "nrf.GND_B",
+      "nrf.GND_C",
+      "driver.GND_A",
+      "driver.GND_B",
+      "driver.GND_C",
+      "fader.POT_LOW"
+    ],
+    [
+      "nrf.P0.02",
+      "fader.WIPER"
+    ],
+    [
+      "nrf.P0.22",
+      "driver.PWMA"
+    ],
+    [
+      "nrf.P0.20",
+      "driver.AIN2"
+    ],
+    [
+      "nrf.P0.15",
+      "driver.AIN1"
+    ],
+    [
+      "nrf.P0.13",
+      "driver.STBY"
+    ],
+    [
+      "driver.AOUT1",
+      "fader.M1"
+    ],
+    [
+      "driver.AOUT2",
+      "fader.M2"
+    ]
+  ],
+  "sidebar": [
+    {
+      "type": "text",
+      "y": 285,
+      "title": "01 / PLACE THE MODULES",
+      "lines": [
+        "Upper U: TB6612 in C10-C15 / G8-G17.",
+        "VM end down; offset motor-power pads stay empty.",
+        "Lower L: Nordic in C8-C17 / G8-G17; USB down.",
+        "Rows restart at 1 on each mini. No power rails."
+      ]
+    },
+    {
+      "type": "wire_table",
+      "y": 470,
+      "title": "02 / SEVEN BOARD JUMPERS",
+      "group": "jumpers",
+      "row_height": 68
+    },
+    {
+      "type": "wire_table",
+      "y": 1035,
+      "title": "03 / FADER PIGTAILS",
+      "group": "pigtails",
+      "row_height": 48
+    },
+    {
+      "type": "text",
+      "y": 1340,
+      "title": "04 / ENABLE PULLDOWN",
+      "lines": [
+        "R1: 2.2 kohm, U:I11 (STBY) to U:I15 (GND).",
+        "Keeps the motor off while the MCU pin floats.",
+        "Confirm the pot tabs with a meter; leave T open."
+      ]
+    }
+  ],
+  "footer_cards": [
+    {
+      "title": "ONE INPUT",
+      "color": "#C45524",
+      "lines": [
+        "USB-A extension into the dongle.",
+        "5 V goes out through VBUS to VMotor.",
+        "No second supply; USB data still works."
+      ]
+    },
+    {
+      "title": "BEFORE MOTION",
+      "color": "#17836D",
+      "lines": [
+        "Meter VBUS about 5 V; VCC at least 2.7 V.",
+        "Boot with STBY low; hand-sweep the ADC.",
+        "Then test one 20 ms pulse at mid-travel."
+      ]
+    },
+    {
+      "title": "USB CURRENT CHECK",
+      "color": "#42586B",
+      "lines": [
+        "Verify startup/stall demand and VM under load.",
+        "The 5 V connection is checked; motor current",
+        "and actual breadboard fit need bench checks."
+      ]
+    }
+  ],
+  "bench_unknowns": [
+    "Actual motor startup/stall current and USB port/supply budget",
+    "VBUS / VM droop, noise and MCU resets during motor switching",
+    "VDD OUT with the installed firmware; driver VCC must be at least 2.7 V",
+    "Actual header fit, lead routing and USB extension clearance",
+    "Pot terminal identity and motor polarity",
+    "No firmware or hardware test has been performed by this renderer"
+  ],
+  "sources": [
+    {
+      "label": "Nordic power / VBUS",
+      "url": "https://docs.nordicsemi.com/r/bundle/ug_nrf52840_dongle/page/ug/nrf52840_dongle/hw_power_internal_regulator.html"
+    },
+    {
+      "label": "Nordic production hardware / header pin order",
+      "url": "https://www.nordicsemi.com/Products/Development-hardware/nrf52840-dongle/download"
+    },
+    {
+      "label": "Adafruit TB6612 board source",
+      "url": "https://github.com/adafruit/Adafruit-TB6612-Motor-Driver-Breakout-PCB/blob/master/Adafruit%20TB6612.brd",
+      "blob_sha": "17df1afba1d4e98543dde18b57d9bcaed180659d"
+    },
+    {
+      "label": "Adafruit TB6612 pinouts",
+      "url": "https://learn.adafruit.com/adafruit-tb6612-h-bridge-dc-stepper-motor-driver-breakout/pinouts"
+    },
+    {
+      "label": "Adafruit 5466 motorized fader",
+      "url": "https://www.adafruit.com/product/5466"
+    }
+  ],
+  "origin_note": "Rebuilt from saved fader diagram version 6 and handoff wiring.json version 5. Revision 7 replaces the USB-C breakout and its two supply jumpers with W1 from dongle VBUS. Existing MCU control pins are preserved.",
+  "badge": "REVISION 7 / ONE USB"
+}

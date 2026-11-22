@@ -1,0 +1,13 @@
+{
+  "id": "olimex-mini",
+  "kind": "breadboard",
+  "title": "Olimex BREADBOARD-MINI",
+  "rows": 17,
+  "columns": "ABCDEFGHIJ",
+  "column_pitch_units": [0, 1, 2, 3, 4, 7, 8, 9, 10, 11],
+  "pitch_mm": 2.54,
+  "dimensions_mm": [35, 45],
+  "connected_strips": ["ABCDE", "FGHIJ"],
+  "source": "https://www.olimex.com/Products/Breadboarding/BREADBOARD-MINI/",
+  "notes": "A-E and F-J connect separately within each numbered row. There are no power rails."
+}

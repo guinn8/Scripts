@@ -1,0 +1,9 @@
+{
+  "id": "adafruit-fader-5466",
+  "kind": "external",
+  "title": "Motorized fader",
+  "subtitle": "Adafruit 5466 / 100 mm / 10 kohm",
+  "pins": ["M1", "M2", "POT_LOW", "WIPER", "POT_HIGH", "TOUCH"],
+  "source": "https://www.adafruit.com/product/5466",
+  "notes": "Motor and potentiometer are electrically separate. Confirm pot ends and wiper with a meter; tape labels A/B/C are user labels, not universal factory pin numbering. Leave touch terminal open. Manufacturer lists motor 6-10 V but reports operation at 5 V; actual startup/stall current is unmeasured."
+}

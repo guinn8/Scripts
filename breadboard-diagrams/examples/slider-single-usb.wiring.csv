@@ -1,0 +1,14 @@
+ID,Function,From,To,Pin mapping,Value
+W1,USB 5 V,L:B17,U:J17,VBUS > VMotor,
+W2,Logic supply,L:B16,U:J16,VDD OUT > VCC,
+W3,Common ground,L:B15,U:B12,GND > GND,
+W4,PWM,L:J13,U:J8,P0.22 > PWMA,
+W5,Direction 2,L:J14,U:J9,P0.20 > AIN2,
+W6,Direction 1,L:J16,U:J10,P0.15 > AIN1,
+W7,Enable,L:J17,U:J11,P0.13 > STBY,
+F1,Motor M1,fader.M1,U:A10,Motor terminal 1 > AOUT1,
+F2,Motor M2,fader.M2,U:A11,Motor terminal 2 > AOUT2,
+F3,B / WIPER,fader.WIPER,L:A12,Wiper > P0.02 / AIN0,
+F4,A / POT-,fader.POT_LOW,L:A15,Pot end > GND,
+F5,C / POT+,fader.POT_HIGH,L:A16,Pot end > VDD OUT,
+R1,resistor,U:I11,U:I15,,2200 ohm

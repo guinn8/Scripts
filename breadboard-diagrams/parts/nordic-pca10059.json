@@ -1,0 +1,14 @@
+{
+  "id": "nordic-pca10059",
+  "kind": "module",
+  "title": "Nordic PCA10059",
+  "subtitle": "nRF52840 USB dongle",
+  "fill": "#176451",
+  "headers": [
+    {"column": "C", "start_row": 8, "pins": ["GND_A", "P1.10", "P1.13", "P1.15", "P0.02", "P0.29", "P0.31", "GND_B", "VDD_OUT", "VBUS"]},
+    {"column": "G", "start_row": 8, "pins": ["GND_C", "P0.10", "P0.09", "P1.00", "P0.24", "P0.22", "P0.20", "P0.17", "P0.15", "P0.13"]}
+  ],
+  "internal_nets": [["GND_A", "GND_B", "GND_C"]],
+  "source": "https://www.nordicsemi.com/Products/Development-hardware/nrf52840-dongle/download",
+  "notes": "USB points down. Header centers are 15.24 mm apart. VBUS is USB 5 V, VDD_OUT is a separate configurable low-voltage rail. Body drawing is stylized, not a mechanical envelope."
+}
