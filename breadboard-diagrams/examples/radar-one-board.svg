@@ -1,0 +1,527 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1770" viewBox="0 0 1700 1770" role="img">
+<title>One mini. Remote radar.</title>
+<desc>Top-view breadboard assembly drawing. Refer to the generated wiring table and validation report.</desc>
+<rect x="0" y="0" width="1700" height="1770" rx="0" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<rect x="60" y="53" width="78" height="7" rx="3" fill="#17836D" stroke="none" stroke-width="1"/>
+<text x="60" y="124" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="54" font-weight="700" text-anchor="start">One mini. Remote radar.</text>
+<text x="60" y="169" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="400" text-anchor="start">Nordic PCA10059 + DFRobot SEN0610 / one USB cable</text>
+<text x="60" y="204" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="22" font-weight="400" text-anchor="start">The sensor stays on its pigtail. All interface parts fit on one mini.</text>
+<rect x="1375" y="74" width="270" height="56" rx="12" fill="#E0EFE9" stroke="none" stroke-width="1"/>
+<text x="1510" y="110" fill="#176451" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="middle">REV C / ONE MINI</text>
+<text x="430" y="600" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="start">B / ONE 45 x 35 mm MINI</text>
+<rect x="388.3070866141732" y="694.251968503937" width="413.38582677165357" height="531.496062992126" rx="16" fill="#FFFFFF" stroke="#A8BCC8" stroke-width="2"/>
+<rect x="566.5" y="715" width="57.0" height="490" rx="8" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="430" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">A</text>
+<text x="460" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">B</text>
+<text x="490" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">C</text>
+<text x="520" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">D</text>
+<text x="550" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">E</text>
+<text x="640" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">F</text>
+<text x="670" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">G</text>
+<text x="700" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">H</text>
+<text x="730" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">I</text>
+<text x="760" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">J</text>
+<polyline points="430,720 550,720" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,720 760,720" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="720" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,750 550,750" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,750 760,750" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="750" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,780 550,780" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,780 760,780" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="780" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,810 550,810" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,810 760,810" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="810" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,840 550,840" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,840 760,840" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="840" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,870 550,870" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,870 760,870" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="870" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,900 550,900" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,900 760,900" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="900" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,930 550,930" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,930 760,930" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="930" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,960 550,960" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,960 760,960" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="960" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,990 550,990" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,990 760,990" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="990" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,1020 550,1020" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,1020 760,1020" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="1020" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,1050 550,1050" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,1050 760,1050" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="1050" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,1080 550,1080" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,1080 760,1080" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="1080" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,1110 550,1110" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,1110 760,1110" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="1110" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,1140 550,1140" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,1140 760,1140" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="1140" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,1170 550,1170" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,1170 760,1170" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="1170" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<polyline points="430,1200 550,1200" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="640,1200 760,1200" fill="none" stroke="#E8EDEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="460" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="490" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="520" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="550" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="640" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="670" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="700" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="730" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="1200" r="4" fill="#B5C3CD" stroke="none" stroke-width="1"/>
+<rect x="476" y="879.0" width="208" height="345.0" rx="10" fill="#176451" stroke="#102B38" stroke-width="2"/>
+<rect x="492" y="887.0" width="176" height="20" rx="4" fill="#86A986" stroke="none" stroke-width="1"/>
+<text x="580.0" y="902.0" fill="#163F2C" font-family="DejaVu Sans, sans-serif" font-size="9" font-weight="700" text-anchor="middle">ANTENNA / KEEP CLEAR</text>
+<text x="580.0" y="1219" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle">PCA10059</text>
+<rect x="555.0" y="1025" width="50" height="63" rx="3" fill="#153B34" stroke="#578878" stroke-width="1"/>
+<text x="580.0" y="1050" fill="#D6E7DC" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle">nRF</text>
+<text x="580.0" y="1072" fill="#D6E7DC" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="middle">52840</text>
+<rect x="526.0" y="1224" width="108" height="109" rx="4" fill="#B7C4CA" stroke="#566D7C" stroke-width="2"/>
+<rect x="537.0" y="1300" width="86" height="18" rx="2" fill="#7B909C" stroke="none" stroke-width="1"/>
+<text x="580.0" y="1269" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="middle">USB-A</text>
+<polyline points="580.0,1333 580.0,1384" fill="none" stroke="#354B5B" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="580.0" y="1417" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="middle">ONE USB CABLE</text>
+<text x="580.0" y="1444" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="middle">power + optional data</text>
+<circle cx="490" cy="930" r="6" fill="#FFDB8A" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="934" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="700" text-anchor="start">GND</text>
+<circle cx="490" cy="960" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="964" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="start">1.10</text>
+<circle cx="490" cy="990" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="994" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="start">1.13</text>
+<circle cx="490" cy="1020" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="1024" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="start">1.15</text>
+<circle cx="490" cy="1050" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="1054" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="start">0.02</text>
+<circle cx="490" cy="1080" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="1084" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="start">0.29</text>
+<circle cx="490" cy="1110" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="1114" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="start">0.31</text>
+<circle cx="490" cy="1140" r="6" fill="#FFDB8A" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="1144" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="700" text-anchor="start">GND</text>
+<circle cx="490" cy="1170" r="6" fill="#FFDB8A" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="1174" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="700" text-anchor="start">VDD OUT</text>
+<circle cx="490" cy="1200" r="6" fill="#FFDB8A" stroke="#153B44" stroke-width="0.5"/>
+<text x="502" y="1204" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="700" text-anchor="start">VBUS</text>
+<circle cx="670" cy="930" r="6" fill="#FFDB8A" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="934" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="700" text-anchor="end">GND</text>
+<circle cx="670" cy="960" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="964" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="end">0.10</text>
+<circle cx="670" cy="990" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="994" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="end">0.09</text>
+<circle cx="670" cy="1020" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="1024" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="end">1.00</text>
+<circle cx="670" cy="1050" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="1054" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="end">0.24</text>
+<circle cx="670" cy="1080" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="1084" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="end">0.22</text>
+<circle cx="670" cy="1110" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="1114" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="end">0.20</text>
+<circle cx="670" cy="1140" r="6" fill="#91A6AA" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="1144" fill="#B1C3C6" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="400" text-anchor="end">0.17</text>
+<circle cx="670" cy="1170" r="6" fill="#FFDB8A" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="1174" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="700" text-anchor="end">0.15</text>
+<circle cx="670" cy="1200" r="6" fill="#FFDB8A" stroke="#153B44" stroke-width="0.5"/>
+<text x="658" y="1204" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="11.5" font-weight="700" text-anchor="end">0.13</text>
+<rect x="435" y="270" width="335" height="220" rx="16" fill="#285A53" stroke="#315C58" stroke-width="2"/>
+<text x="602.5" y="312" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="25" font-weight="700" text-anchor="middle">DFRobot SEN0610</text>
+<text x="602.5" y="349" fill="#DBECE7" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Remote on its 4-wire cable</text>
+<text x="602.5" y="377" fill="#DBECE7" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Aim the sensor independently</text>
+<text x="602.5" y="405" fill="#DBECE7" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="middle">Ports below are schematic</text>
+<circle cx="470" cy="480" r="6" fill="#42586B" stroke="none" stroke-width="1"/>
+<text x="470" y="467" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle">- / GND</text>
+<circle cx="545" cy="480" r="6" fill="#2B5DA8" stroke="none" stroke-width="1"/>
+<text x="545" y="467" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle">D/T / TX</text>
+<circle cx="620" cy="480" r="6" fill="#BB6900" stroke="none" stroke-width="1"/>
+<text x="620" y="467" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle">C/R / RX</text>
+<circle cx="695" cy="480" r="6" fill="#C45524" stroke="none" stroke-width="1"/>
+<text x="695" y="467" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="700" text-anchor="middle">+ / 5V</text>
+<polyline points="490,810 630.3149606299213,815.9055118110236" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="490,810 630.3149606299213,815.9055118110236" fill="none" stroke="#8A7753" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,810 704.7244094488188,815.9055118110236" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,810 704.7244094488188,815.9055118110236" fill="none" stroke="#8A7753" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="630.3149606299213" y="801.732283464567" width="74.40944881889763" height="28.346456692913385" rx="5" fill="#E8DEC0" stroke="#8D7855" stroke-width="1.5"/>
+<text x="667.5196850393701" y="820.9055118110236" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">R1 10k</text>
+<circle cx="490" cy="810" r="5" fill="#8A7753" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="810" r="5" fill="#8A7753" stroke="none" stroke-width="1"/>
+<polyline points="490,780 545.2755905511812,780" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="490,780 545.2755905511812,780" fill="none" stroke="#8A7753" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,780 619.6850393700787,780" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,780 619.6850393700787,780" fill="none" stroke="#8A7753" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="545.2755905511812" y="765.8267716535433" width="74.40944881889763" height="28.346456692913385" rx="5" fill="#E8DEC0" stroke="#8D7855" stroke-width="1.5"/>
+<text x="582.4803149606299" y="785" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">R2 10k</text>
+<circle cx="490" cy="780" r="5" fill="#8A7753" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="780" r="5" fill="#8A7753" stroke="none" stroke-width="1"/>
+<polyline points="490,750 630.3149606299213,750" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="490,750 630.3149606299213,750" fill="none" stroke="#8A7753" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,750 704.7244094488188,750" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,750 704.7244094488188,750" fill="none" stroke="#8A7753" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="630.3149606299213" y="735.8267716535433" width="74.40944881889763" height="28.346456692913385" rx="5" fill="#E8DEC0" stroke="#8D7855" stroke-width="1.5"/>
+<text x="667.5196850393701" y="755" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">R3 10k</text>
+<circle cx="490" cy="750" r="5" fill="#8A7753" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="750" r="5" fill="#8A7753" stroke="none" stroke-width="1"/>
+<polyline points="490,720 545.2755905511812,720" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="490,720 545.2755905511812,720" fill="none" stroke="#8A7753" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,720 619.6850393700787,720" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,720 619.6850393700787,720" fill="none" stroke="#8A7753" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="545.2755905511812" y="705.8267716535433" width="74.40944881889763" height="28.346456692913385" rx="5" fill="#E8DEC0" stroke="#8D7855" stroke-width="1.5"/>
+<text x="582.4803149606299" y="725" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="12" font-weight="700" text-anchor="middle">R4 10k</text>
+<circle cx="490" cy="720" r="5" fill="#8A7753" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="720" r="5" fill="#8A7753" stroke="none" stroke-width="1"/>
+<polyline points="700,840 735,860 735,910 760,915.4724409448819" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="700,840 735,860 735,910 760,915.4724409448819" fill="none" stroke="#997242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,900 780,910 760,974.5275590551181" fill="none" stroke="#F4F7F7" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="760,900 780,910 760,974.5275590551181" fill="none" stroke="#997242" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="728.1102362204724" y="915.4724409448819" width="63.77952755905512" height="59.05511811023622" rx="5" fill="#C38D47" stroke="#8D7855" stroke-width="1.5"/>
+<text x="760" y="950" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle">C1</text>
+<circle cx="700" cy="840" r="5" fill="#997242" stroke="none" stroke-width="1"/>
+<circle cx="760" cy="900" r="5" fill="#997242" stroke="none" stroke-width="1"/>
+<polyline points="430,1200 335,1200 335,620 850,620 850,840 730,840" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="430,1200 335,1200 335,620 850,620 850,840 730,840" fill="none" stroke="#C45524" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="1200" r="6" fill="#C45524" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="730" cy="840" r="6" fill="#C45524" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="318" y="1139" width="34" height="22" rx="5" fill="#C45524" stroke="none" stroke-width="1"/>
+<text x="335" y="1155" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle">W1</text>
+<polyline points="430,1140 355,1140 355,645 520,645 520,720" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="430,1140 355,1140 355,645 520,645 520,720" fill="none" stroke="#42586B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="1140" r="6" fill="#42586B" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="520" cy="720" r="6" fill="#42586B" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="338" y="1069" width="34" height="22" rx="5" fill="#42586B" stroke="none" stroke-width="1"/>
+<text x="355" y="1085" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle">W2</text>
+<polyline points="670,780 875,780 875,1200 730,1200" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="670,780 875,780 875,1200 730,1200" fill="none" stroke="#2B5DA8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 8"/>
+<circle cx="670" cy="780" r="6" fill="#2B5DA8" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="730" cy="1200" r="6" fill="#2B5DA8" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="858" y="989" width="34" height="22" rx="5" fill="#2B5DA8" stroke="none" stroke-width="1"/>
+<text x="875" y="1005" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700" text-anchor="middle">W3</text>
+<polyline points="730,810 730,780" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="730,810 730,780" fill="none" stroke="#2B5DA8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="730" cy="810" r="6" fill="#2B5DA8" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="730" cy="780" r="6" fill="#2B5DA8" stroke="#FFFFFF" stroke-width="1"/>
+<polyline points="430,780 430,750" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="430,780 430,750" fill="none" stroke="#6A7B88" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="780" r="6" fill="#6A7B88" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="430" cy="750" r="6" fill="#6A7B88" stroke="#FFFFFF" stroke-width="1"/>
+<polyline points="730,750 730,720" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="730,750 730,720" fill="none" stroke="#6A7B88" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="730" cy="750" r="6" fill="#6A7B88" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="730" cy="720" r="6" fill="#6A7B88" stroke="#FFFFFF" stroke-width="1"/>
+<polyline points="700,900 895,900 895,660 460,660 460,720" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="700,900 895,900 895,660 460,660 460,720" fill="none" stroke="#42586B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="700" cy="900" r="6" fill="#42586B" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="460" cy="720" r="6" fill="#42586B" stroke="#FFFFFF" stroke-width="1"/>
+<polyline points="695,480 695,515 915,515 915,840 760,840" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="695,480 695,515 915,515 915,840 760,840" fill="none" stroke="#C45524" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="695" cy="480" r="6" fill="#C45524" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="760" cy="840" r="6" fill="#C45524" stroke="#FFFFFF" stroke-width="1"/>
+<polyline points="470,480 375,480 375,720 430,720" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="470,480 375,480 375,720 430,720" fill="none" stroke="#42586B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="470" cy="480" r="6" fill="#42586B" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="430" cy="720" r="6" fill="#42586B" stroke="#FFFFFF" stroke-width="1"/>
+<polyline points="545,480 545,550 395,550 395,810 430,810" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="545,480 545,550 395,550 395,810 430,810" fill="none" stroke="#2B5DA8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="545" cy="480" r="6" fill="#2B5DA8" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="430" cy="810" r="6" fill="#2B5DA8" stroke="#FFFFFF" stroke-width="1"/>
+<polyline points="620,480 620,530 935,530 935,1170 760,1170" fill="none" stroke="#F4F7F7" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="620,480 620,530 935,530 935,1170 760,1170" fill="none" stroke="#BB6900" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="620" cy="480" r="6" fill="#BB6900" stroke="#FFFFFF" stroke-width="1"/>
+<circle cx="760" cy="1170" r="6" fill="#BB6900" stroke="#FFFFFF" stroke-width="1"/>
+<rect x="808" y="711" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="725" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">1</text>
+<rect x="808" y="741" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="755" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">2</text>
+<rect x="808" y="771" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="785" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">3</text>
+<rect x="808" y="801" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="815" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">4</text>
+<rect x="808" y="831" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="845" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">5</text>
+<rect x="808" y="861" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="875" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">6</text>
+<rect x="808" y="891" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="905" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">7</text>
+<rect x="808" y="921" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="935" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">8</text>
+<rect x="808" y="951" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="965" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">9</text>
+<rect x="808" y="981" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="995" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">10</text>
+<rect x="808" y="1011" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="1025" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">11</text>
+<rect x="808" y="1041" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="1055" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">12</text>
+<rect x="808" y="1071" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="1085" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">13</text>
+<rect x="808" y="1101" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="1115" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">14</text>
+<rect x="808" y="1131" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="1145" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">15</text>
+<rect x="808" y="1161" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="1175" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">16</text>
+<rect x="808" y="1191" width="24" height="19" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="828" y="1205" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="12" font-weight="400" text-anchor="end">17</text>
+<rect x="420" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="430" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">A</text>
+<rect x="450" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="460" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">B</text>
+<rect x="480" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="490" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">C</text>
+<rect x="510" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="520" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">D</text>
+<rect x="540" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="550" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">E</text>
+<rect x="630" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="640" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">F</text>
+<rect x="660" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="670" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">G</text>
+<rect x="690" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="700" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">H</text>
+<rect x="720" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="730" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">I</text>
+<rect x="750" y="677" width="20" height="20" rx="2" fill="#F4F7F7" stroke="none" stroke-width="1"/>
+<text x="760" y="692" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">J</text>
+<text x="95" y="1365" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">TOP VIEW</text>
+<text x="95" y="1394" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Gold pads = module pins.</text>
+<text x="95" y="1423" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Crossings without dots do not join.</text>
+<text x="95" y="1452" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Part bodies are stylized.</text>
+<rect x="975" y="243" width="670" height="1245" rx="18" fill="#FFFFFF" stroke="#D0DBDF" stroke-width="1.5"/>
+<text x="1003" y="285" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="start">01 / PLACE AND FORM THE PARTS</text>
+<text x="1003" y="319" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">B: Nordic headers C8-C17 / G8-G17; USB down.</text>
+<text x="1003" y="347" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">R4 / R3 / R2 / R1 span C-J on rows 1 / 2 / 3 / 4.</text>
+<text x="1003" y="375" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">Stagger R4/R2 bodies left; R3/R1 bodies right.</text>
+<text x="1003" y="403" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">R1 body sits 0.5 mm below its lead-hole row.</text>
+<text x="1003" y="431" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">C1: H5 &gt; J7; body at right beside rows 8-9.</text>
+<text x="1003" y="485" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="start">02 / SEVEN JUMPERS</text>
+<polyline points="1003,505 1617,505" fill="none" stroke="#CFDADF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1003" y="525" width="34" height="26" rx="5" fill="#C45524" stroke="none" stroke-width="1"/>
+<text x="1020" y="544" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">W1</text>
+<text x="1051" y="544" fill="#C45524" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">USB 5 V</text>
+<text x="1617" y="544" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:A17 &gt; B:I5</text>
+<text x="1051" y="568" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">VBUS &gt; radar +</text>
+<rect x="1003" y="582" width="34" height="26" rx="5" fill="#42586B" stroke="none" stroke-width="1"/>
+<text x="1020" y="601" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">W2</text>
+<text x="1051" y="601" fill="#42586B" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">Common ground</text>
+<text x="1617" y="601" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:A15 &gt; B:D1</text>
+<text x="1051" y="625" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">GND &gt; divider return</text>
+<rect x="1003" y="639" width="34" height="26" rx="5" fill="#2B5DA8" stroke="none" stroke-width="1"/>
+<text x="1020" y="658" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">W3</text>
+<text x="1051" y="658" fill="#2B5DA8" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">RX / CONNECT LAST</text>
+<text x="1617" y="658" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:G3 &gt; B:I17</text>
+<text x="1051" y="682" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">Divider tap &gt; P0.13 / leave I17 out for voltage check</text>
+<rect x="1003" y="696" width="34" height="26" rx="5" fill="#2B5DA8" stroke="none" stroke-width="1"/>
+<text x="1020" y="715" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">J1</text>
+<text x="1051" y="715" fill="#2B5DA8" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">R1/R2 tap</text>
+<text x="1617" y="715" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:I4 &gt; B:I3</text>
+<text x="1051" y="739" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">Joins right strips 4 and 3</text>
+<rect x="1003" y="753" width="34" height="26" rx="5" fill="#6A7B88" stroke="none" stroke-width="1"/>
+<text x="1020" y="772" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">J2</text>
+<text x="1051" y="772" fill="#6A7B88" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">R2/R3 junction</text>
+<text x="1617" y="772" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:A3 &gt; B:A2</text>
+<text x="1051" y="796" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">Joins left strips 3 and 2</text>
+<rect x="1003" y="810" width="34" height="26" rx="5" fill="#6A7B88" stroke="none" stroke-width="1"/>
+<text x="1020" y="829" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">J3</text>
+<text x="1051" y="829" fill="#6A7B88" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">R3/R4 junction</text>
+<text x="1617" y="829" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:I2 &gt; B:I1</text>
+<text x="1051" y="853" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">Joins right strips 2 and 1</text>
+<rect x="1003" y="867" width="34" height="26" rx="5" fill="#42586B" stroke="none" stroke-width="1"/>
+<text x="1020" y="886" fill="#FFFFFF" font-family="DejaVu Sans, sans-serif" font-size="14" font-weight="700" text-anchor="middle">J4</text>
+<text x="1051" y="886" fill="#42586B" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">Capacitor return</text>
+<text x="1617" y="886" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:H7 &gt; B:B1</text>
+<text x="1051" y="910" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">C1 low &gt; ground; exposed hole B1</text>
+<text x="1003" y="965" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="start">03 / REMOTE SENSOR PIGTAIL</text>
+<polyline points="1003,985 1617,985" fill="none" stroke="#CFDADF" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1003" y="1024" fill="#C45524" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">+ / radar power</text>
+<text x="1617" y="1024" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:J5</text>
+<text x="1003" y="1048" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">Sensor + / USB 5 V, not VDD OUT</text>
+<text x="1003" y="1084" fill="#42586B" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">- / radar ground</text>
+<text x="1617" y="1084" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:A1</text>
+<text x="1003" y="1108" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">Sensor - / common ground</text>
+<text x="1003" y="1144" fill="#2B5DA8" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">D/T / radar TX</text>
+<text x="1617" y="1144" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:A4</text>
+<text x="1003" y="1168" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">Raw UART TX enters R1</text>
+<text x="1003" y="1204" fill="#BB6900" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="700" text-anchor="start">C/R / radar RX</text>
+<text x="1617" y="1204" fill="#173044" font-family="DejaVu Sans Mono, monospace" font-size="18" font-weight="400" text-anchor="end">B:J16</text>
+<text x="1003" y="1228" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="16" font-weight="400" text-anchor="start">P0.15 TX reaches C/R directly; no extra jumper</text>
+<text x="1003" y="1275" fill="#173044" font-family="DejaVu Sans, sans-serif" font-size="21" font-weight="700" text-anchor="start">04 / TAP AND RETURN CORRECTED</text>
+<text x="1003" y="1309" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">W3 taps G3, on the same net as right row 4.</text>
+<text x="1003" y="1337" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">J4 returns to B1, on the same ground as D1.</text>
+<text x="1003" y="1365" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">Both endpoints are exposed beside resistor bodies.</text>
+<text x="1003" y="1393" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">Use this map instead of the earlier Rev B mockup.</text>
+<text x="1003" y="1421" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="18" font-weight="400" text-anchor="start">VDD OUT remains a measurement point only.</text>
+<rect x="60" y="1540" width="515" height="150" rx="13" fill="#FFFFFF" stroke="#CFDADF" stroke-width="1"/>
+<rect x="60" y="1540" width="5" height="150" rx="2" fill="#8A7753" stroke="none" stroke-width="1"/>
+<text x="82" y="1574" fill="#8A7753" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" text-anchor="start">STAGGERED 10k / 30k DIVIDER</text>
+<text x="82" y="1607" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Four 10k resistors give 0.75 x radar TX.</text>
+<text x="82" y="1634" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Expected 3.3 V high becomes about 2.48 V.</text>
+<text x="82" y="1661" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Not suitable for a 5 V UART output.</text>
+<rect x="595" y="1540" width="515" height="150" rx="13" fill="#FFFFFF" stroke="#CFDADF" stroke-width="1"/>
+<rect x="595" y="1540" width="5" height="150" rx="2" fill="#2B5DA8" stroke="none" stroke-width="1"/>
+<text x="617" y="1574" fill="#2B5DA8" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" text-anchor="start">W3 / MEASURE BEFORE CONNECTING</text>
+<text x="617" y="1607" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Leave I17 unplugged; VDD must be 2.9-3.1 V.</text>
+<text x="617" y="1634" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Scope tap G3 vs A1 through startup and data.</text>
+<text x="617" y="1661" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Use the full voltage gate documented in README.</text>
+<rect x="1130" y="1540" width="515" height="150" rx="13" fill="#FFFFFF" stroke="#CFDADF" stroke-width="1"/>
+<rect x="1130" y="1540" width="5" height="150" rx="2" fill="#42586B" stroke="none" stroke-width="1"/>
+<text x="1152" y="1574" fill="#42586B" font-family="DejaVu Sans, sans-serif" font-size="19" font-weight="700" text-anchor="start">PROTOTYPE / BENCH CHECKS OPEN</text>
+<text x="1152" y="1607" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">UART: TX P0.15 / RX P0.13 / 9600, 8N1.</text>
+<text x="1152" y="1634" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Check real lead forming, housings and levels.</text>
+<text x="1152" y="1661" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">No firmware, RF or hardware test is implied.</text>
+<text x="60" y="1726" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="17" font-weight="400" text-anchor="start">Header-aware connectivity checked / hardware bring-up still required</text>
+<text x="1645" y="1726" fill="#5B7081" font-family="DejaVu Sans Mono, monospace" font-size="16" font-weight="400" text-anchor="end">data c0f92455ca97</text>
+<text x="60" y="1754" fill="#5B7081" font-family="DejaVu Sans, sans-serif" font-size="15" font-weight="400" text-anchor="start">Editable circuit data + reusable part definitions + renderer / sources and bench notes in README</text>
+</svg>

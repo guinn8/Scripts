@@ -1,0 +1,31 @@
+{
+  "id": "dfrobot-sen0610",
+  "kind": "external",
+  "drawing": "panel",
+  "title": "DFRobot SEN0610",
+  "fill": "#285A53",
+  "pins": [
+    "VCC",
+    "GND",
+    "D_T",
+    "C_R"
+  ],
+  "pin_labels": {
+    "VCC": "+ / 5V",
+    "GND": "- / GND",
+    "D_T": "D/T / TX",
+    "C_R": "C/R / RX"
+  },
+  "port_colors": {
+    "VCC": "#C45524",
+    "GND": "#42586B",
+    "D_T": "#2B5DA8",
+    "C_R": "#BB6900"
+  },
+  "dimensions_mm": [
+    30,
+    22
+  ],
+  "source": "https://wiki.dfrobot.com/sen0610/",
+  "notes": "Remote 4-wire PH2.0 cable. + power, - ground, D/T is sensor TX in UART mode, C/R is sensor RX. Illustration port order is schematic, not a connector pin-number claim. Set mode switch to UART. Supply 3.3V/5V, UART 9600 baud. Public information checked does not specify UART VOH/VOL or RX VIH."
+}

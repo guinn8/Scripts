@@ -1,0 +1,683 @@
+{
+  "schema_version": 1,
+  "id": "radar-one-board",
+  "revision": "C",
+  "badge": "REV C / ONE MINI",
+  "title": "One mini. Remote radar.",
+  "subtitle": "Nordic PCA10059 + DFRobot SEN0610 / one USB cable",
+  "strapline": "The sensor stays on its pigtail. All interface parts fit on one mini.",
+  "canvas": [
+    1700,
+    1770
+  ],
+  "boards": [
+    {
+      "id": "B",
+      "part": "olimex-mini",
+      "origin": [
+        430,
+        720
+      ],
+      "pitch": 30,
+      "label": "B / ONE 45 x 35 mm MINI",
+      "label_offset": [
+        0,
+        -120
+      ],
+      "physical_outline": true,
+      "row_labels_side": "right",
+      "column_label_knockouts": true
+    }
+  ],
+  "instances": [
+    {
+      "id": "nrf",
+      "part": "nordic-pca10059",
+      "board": "B"
+    },
+    {
+      "id": "radar",
+      "part": "dfrobot-sen0610",
+      "origin": [
+        435,
+        270
+      ],
+      "size": [
+        335,
+        220
+      ],
+      "detail_lines": [
+        "Remote on its 4-wire cable",
+        "Aim the sensor independently",
+        "Ports below are schematic"
+      ],
+      "ports": {
+        "GND": [
+          470,
+          480
+        ],
+        "D_T": [
+          545,
+          480
+        ],
+        "C_R": [
+          620,
+          480
+        ],
+        "VCC": [
+          695,
+          480
+        ]
+      }
+    }
+  ],
+  "wires": [
+    {
+      "id": "W1",
+      "label": "USB 5 V",
+      "from": "B:A17",
+      "to": "B:I5",
+      "color": "#C45524",
+      "width": 4,
+      "group": "jumpers",
+      "pins": "VBUS > radar +",
+      "via": [
+        [
+          335,
+          1200
+        ],
+        [
+          335,
+          620
+        ],
+        [
+          850,
+          620
+        ],
+        [
+          850,
+          840
+        ]
+      ],
+      "badge": [
+        335,
+        1150
+      ]
+    },
+    {
+      "id": "W2",
+      "label": "Common ground",
+      "from": "B:A15",
+      "to": "B:D1",
+      "color": "#42586B",
+      "width": 4,
+      "group": "jumpers",
+      "pins": "GND > divider return",
+      "via": [
+        [
+          355,
+          1140
+        ],
+        [
+          355,
+          645
+        ],
+        [
+          520,
+          645
+        ]
+      ],
+      "badge": [
+        355,
+        1080
+      ]
+    },
+    {
+      "id": "W3",
+      "label": "RX / CONNECT LAST",
+      "from": "B:G3",
+      "to": "B:I17",
+      "color": "#2B5DA8",
+      "width": 4,
+      "group": "jumpers",
+      "pins": "Divider tap > P0.13 / leave I17 out for voltage check",
+      "via": [
+        [
+          875,
+          780
+        ],
+        [
+          875,
+          1200
+        ]
+      ],
+      "badge": [
+        875,
+        1000
+      ],
+      "dash": [
+        10,
+        8
+      ]
+    },
+    {
+      "id": "J1",
+      "label": "R1/R2 tap",
+      "from": "B:I4",
+      "to": "B:I3",
+      "color": "#2B5DA8",
+      "width": 4,
+      "group": "jumpers",
+      "pins": "Joins right strips 4 and 3"
+    },
+    {
+      "id": "J2",
+      "label": "R2/R3 junction",
+      "from": "B:A3",
+      "to": "B:A2",
+      "color": "#6A7B88",
+      "width": 4,
+      "group": "jumpers",
+      "pins": "Joins left strips 3 and 2"
+    },
+    {
+      "id": "J3",
+      "label": "R3/R4 junction",
+      "from": "B:I2",
+      "to": "B:I1",
+      "color": "#6A7B88",
+      "width": 4,
+      "group": "jumpers",
+      "pins": "Joins right strips 2 and 1"
+    },
+    {
+      "id": "J4",
+      "label": "Capacitor return",
+      "from": "B:H7",
+      "to": "B:B1",
+      "color": "#42586B",
+      "width": 4,
+      "group": "jumpers",
+      "pins": "C1 low > ground; exposed hole B1",
+      "via": [
+        [
+          895,
+          900
+        ],
+        [
+          895,
+          660
+        ],
+        [
+          460,
+          660
+        ]
+      ]
+    },
+    {
+      "id": "F1",
+      "label": "+ / radar power",
+      "from": "radar.VCC",
+      "to": "B:J5",
+      "color": "#C45524",
+      "width": 4,
+      "group": "pigtails",
+      "pins": "Sensor + / USB 5 V, not VDD OUT",
+      "via": [
+        [
+          695,
+          515
+        ],
+        [
+          915,
+          515
+        ],
+        [
+          915,
+          840
+        ]
+      ]
+    },
+    {
+      "id": "F2",
+      "label": "- / radar ground",
+      "from": "radar.GND",
+      "to": "B:A1",
+      "color": "#42586B",
+      "width": 4,
+      "group": "pigtails",
+      "pins": "Sensor - / common ground",
+      "via": [
+        [
+          375,
+          480
+        ],
+        [
+          375,
+          720
+        ]
+      ]
+    },
+    {
+      "id": "F3",
+      "label": "D/T / radar TX",
+      "from": "radar.D_T",
+      "to": "B:A4",
+      "color": "#2B5DA8",
+      "width": 4,
+      "group": "pigtails",
+      "pins": "Raw UART TX enters R1",
+      "via": [
+        [
+          545,
+          550
+        ],
+        [
+          395,
+          550
+        ],
+        [
+          395,
+          810
+        ]
+      ]
+    },
+    {
+      "id": "F4",
+      "label": "C/R / radar RX",
+      "from": "radar.C_R",
+      "to": "B:J16",
+      "color": "#BB6900",
+      "width": 4,
+      "group": "pigtails",
+      "pins": "P0.15 TX reaches C/R directly; no extra jumper",
+      "via": [
+        [
+          620,
+          530
+        ],
+        [
+          935,
+          530
+        ],
+        [
+          935,
+          1170
+        ]
+      ]
+    }
+  ],
+  "passives": [
+    {
+      "id": "R1",
+      "kind": "resistor",
+      "ohms": 10000,
+      "value": "10 kohm, 5%",
+      "a": "B:C4",
+      "b": "B:J4",
+      "required_between": [
+        "radar.D_T",
+        "nrf.P0.13"
+      ],
+      "color": "#8A7753",
+      "drawing": {
+        "body_center": [
+          667.5196850393701,
+          815.9055118110236
+        ],
+        "body_size": [
+          74.40944881889763,
+          28.346456692913385
+        ],
+        "label": "R1 10k",
+        "font_size": 12
+      },
+      "body_center_offset_mm": [
+        3.6,
+        0.5
+      ]
+    },
+    {
+      "id": "R2",
+      "kind": "resistor",
+      "ohms": 10000,
+      "value": "10 kohm, 5%",
+      "a": "B:C3",
+      "b": "B:J3",
+      "required_between": [
+        "B:A2",
+        "nrf.P0.13"
+      ],
+      "color": "#8A7753",
+      "drawing": {
+        "body_center": [
+          582.4803149606299,
+          780
+        ],
+        "body_size": [
+          74.40944881889763,
+          28.346456692913385
+        ],
+        "label": "R2 10k",
+        "font_size": 12
+      },
+      "body_center_offset_mm": [
+        -3.6,
+        0
+      ]
+    },
+    {
+      "id": "R3",
+      "kind": "resistor",
+      "ohms": 10000,
+      "value": "10 kohm, 5%",
+      "a": "B:C2",
+      "b": "B:J2",
+      "required_between": [
+        "B:A3",
+        "B:I1"
+      ],
+      "color": "#8A7753",
+      "drawing": {
+        "body_center": [
+          667.5196850393701,
+          750
+        ],
+        "body_size": [
+          74.40944881889763,
+          28.346456692913385
+        ],
+        "label": "R3 10k",
+        "font_size": 12
+      },
+      "body_center_offset_mm": [
+        3.6,
+        0
+      ]
+    },
+    {
+      "id": "R4",
+      "kind": "resistor",
+      "ohms": 10000,
+      "value": "10 kohm, 5%",
+      "a": "B:C1",
+      "b": "B:J1",
+      "required_between": [
+        "nrf.GND_B",
+        "B:I2"
+      ],
+      "color": "#8A7753",
+      "drawing": {
+        "body_center": [
+          582.4803149606299,
+          720
+        ],
+        "body_size": [
+          74.40944881889763,
+          28.346456692913385
+        ],
+        "label": "R4 10k",
+        "font_size": 12
+      },
+      "body_center_offset_mm": [
+        -3.6,
+        0
+      ]
+    },
+    {
+      "id": "C1",
+      "kind": "capacitor",
+      "farads": 1e-07,
+      "value": "100 nF ceramic",
+      "a": "B:H5",
+      "b": "B:J7",
+      "required_between": [
+        "radar.VCC",
+        "nrf.GND_B"
+      ],
+      "color": "#997242",
+      "drawing": {
+        "body_center": [
+          760,
+          945
+        ],
+        "body_size": [
+          63.77952755905512,
+          59.05511811023622
+        ],
+        "label": "C1",
+        "orientation": "vertical",
+        "lead_routes": [
+          [
+            [
+              735,
+              860
+            ],
+            [
+              735,
+              910
+            ]
+          ],
+          [
+            [
+              780,
+              910
+            ]
+          ]
+        ]
+      },
+      "mechanical_note": "Form the body beside rows 8-9 at the right edge; holes H5/J7 are only lead anchors. Keep bare leads clear of H7 jumper contact."
+    }
+  ],
+  "power_sources": [
+    {
+      "id": "usb",
+      "connector": "nrf USB-A",
+      "net": "USB_5V",
+      "nominal_volts": 5
+    }
+  ],
+  "expected_nets": {
+    "nrf.GND_A": "GND",
+    "nrf.GND_B": "GND",
+    "nrf.GND_C": "GND",
+    "nrf.VBUS": "USB_5V",
+    "nrf.VDD_OUT": "LOGIC_VDD",
+    "nrf.P0.15": "MCU_TX",
+    "nrf.P0.13": "MCU_RX",
+    "radar.VCC": "USB_5V",
+    "radar.GND": "GND",
+    "radar.D_T": "RADAR_TX_RAW",
+    "radar.C_R": "MCU_TX",
+    "B:A4": "RADAR_TX_RAW",
+    "B:G3": "MCU_RX",
+    "B:I3": "MCU_RX",
+    "B:J4": "MCU_RX",
+    "B:A3": "DIV_MID_1",
+    "B:A2": "DIV_MID_1",
+    "B:I2": "DIV_MID_2",
+    "B:I1": "DIV_MID_2",
+    "B:H5": "USB_5V",
+    "B:J7": "GND",
+    "B:C1": "GND"
+  },
+  "required_connections": [
+    [
+      "nrf.VBUS",
+      "radar.VCC",
+      "B:H5"
+    ],
+    [
+      "nrf.GND_A",
+      "nrf.GND_B",
+      "nrf.GND_C",
+      "radar.GND",
+      "B:C1",
+      "B:J7"
+    ],
+    [
+      "nrf.P0.15",
+      "radar.C_R"
+    ],
+    [
+      "radar.D_T",
+      "B:C4"
+    ],
+    [
+      "nrf.P0.13",
+      "B:G3",
+      "B:J4",
+      "B:J3"
+    ],
+    [
+      "B:C3",
+      "B:C2"
+    ],
+    [
+      "B:J2",
+      "B:J1"
+    ]
+  ],
+  "sidebar": [
+    {
+      "type": "text",
+      "y": 285,
+      "title": "01 / PLACE AND FORM THE PARTS",
+      "lines": [
+        "B: Nordic headers C8-C17 / G8-G17; USB down.",
+        "R4 / R3 / R2 / R1 span C-J on rows 1 / 2 / 3 / 4.",
+        "Stagger R4/R2 bodies left; R3/R1 bodies right.",
+        "R1 body sits 0.5 mm below its lead-hole row.",
+        "C1: H5 > J7; body at right beside rows 8-9."
+      ]
+    },
+    {
+      "type": "wire_table",
+      "y": 485,
+      "title": "02 / SEVEN JUMPERS",
+      "group": "jumpers",
+      "row_height": 57
+    },
+    {
+      "type": "wire_table",
+      "y": 965,
+      "title": "03 / REMOTE SENSOR PIGTAIL",
+      "group": "pigtails",
+      "row_height": 60
+    },
+    {
+      "type": "text",
+      "y": 1275,
+      "title": "04 / TAP AND RETURN CORRECTED",
+      "lines": [
+        "W3 taps G3, on the same net as right row 4.",
+        "J4 returns to B1, on the same ground as D1.",
+        "Both endpoints are exposed beside resistor bodies.",
+        "Use this map instead of the earlier Rev B mockup.",
+        "VDD OUT remains a measurement point only."
+      ]
+    }
+  ],
+  "footer_cards": [
+    {
+      "title": "STAGGERED 10k / 30k DIVIDER",
+      "color": "#8A7753",
+      "lines": [
+        "Four 10k resistors give 0.75 x radar TX.",
+        "Expected 3.3 V high becomes about 2.48 V.",
+        "Not suitable for a 5 V UART output."
+      ]
+    },
+    {
+      "title": "W3 / MEASURE BEFORE CONNECTING",
+      "color": "#2B5DA8",
+      "lines": [
+        "Leave I17 unplugged; VDD must be 2.9-3.1 V.",
+        "Scope tap G3 vs A1 through startup and data.",
+        "Use the full voltage gate documented in README."
+      ]
+    },
+    {
+      "title": "PROTOTYPE / BENCH CHECKS OPEN",
+      "color": "#42586B",
+      "lines": [
+        "UART: TX P0.15 / RX P0.13 / 9600, 8N1.",
+        "Check real lead forming, housings and levels.",
+        "No firmware, RF or hardware test is implied."
+      ]
+    }
+  ],
+  "bench_unknowns": [
+    "Actual radar TX high/low, startup peaks and C/R input threshold; public data lacks VOH/VOL/VIH",
+    "Actual MCU VDD and radar USB 5V under load",
+    "Capacitor body <=5.5 x 5.5mm assumed; form leads and check clearance",
+    "Resistor lead bends, header housings and actual USB socket fit",
+    "No hardware, firmware, BLE or RF bench test has been performed"
+  ],
+  "interface_gate": {
+    "connect_last": "W3 at B:I17",
+    "measure_tap": "B:G3",
+    "reference": "B:A1",
+    "VDD_test": [
+      "B:A16",
+      "B:A15"
+    ],
+    "VDD_range_volts": [
+      2.9,
+      3.1
+    ],
+    "high_min": "0.7 * measured VDD + 0.1 V",
+    "high_max": "measured VDD - 0.1 V",
+    "low_max_volts": 0.3,
+    "startup": "No peaks outside 0..VDD; a DC meter alone cannot establish this",
+    "if_failed": "Leave W3 disconnected and revise the interface"
+  },
+  "firmware_contract": {
+    "uart": {
+      "tx": "P0.15",
+      "rx": "P0.13",
+      "baud": 9600,
+      "data_bits": 8,
+      "parity": "none",
+      "stop_bits": 1,
+      "flow_control": "none",
+      "rx_pull": "disabled"
+    },
+    "sensor_switch": "UART",
+    "protocol_source": "https://github.com/DFRobot/DFRobot_C4001",
+    "bootloader": "Preserve existing USB DFU image offset and bootloader",
+    "status": "Contract only; no firmware implementation"
+  },
+  "mechanical_notes": {
+    "resistor_body_worst_case_mm": [
+      6.8,
+      2.6
+    ],
+    "alternate_center_offset_mm": 3.6,
+    "R1_center_down_mm": 0.5,
+    "capacitor_plan_envelope_assumed_mm": [
+      5.5,
+      5.5
+    ],
+    "drawing": "Header centers and breadboard outline are proportional; module bodies remain stylized. Lead forming and socket fit need actual parts."
+  },
+  "sources": [
+    {
+      "label": "DFRobot SEN0610 interface",
+      "url": "https://wiki.dfrobot.com/sen0610/"
+    },
+    {
+      "label": "Nordic PCA10059 production hardware",
+      "url": "https://www.nordicsemi.com/Products/Development-hardware/nrf52840-dongle/download"
+    },
+    {
+      "label": "Nordic GPIO operating levels",
+      "url": "https://docs.nordicsemi.com/r/bundle/ps_nrf52840/page/gpio.html"
+    },
+    {
+      "label": "Yageo CFR-25 dimensions, page 3",
+      "url": "https://uploadcdn.oneyac.com/attachments/files/brand_pdf/yageo/E2/B5/YAGEO_CFR_datasheet_2024v3.pdf"
+    }
+  ],
+  "origin_note": "Port of the single-board radar Rev B handoff into the shared library. Rev C fixes W3 H4 -> G3 and J4 E1 -> B1 because the old holes sit beneath resistor bodies. Electrical nets and MCU pin assignments are preserved. The two-board layout is not the target."
+}

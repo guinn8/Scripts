@@ -1,0 +1,60 @@
+{
+  "circuit": "circuits/radar-one-board.json",
+  "revision": "C",
+  "review_date": "2026-11-22",
+  "source_sha256": "c0f92455ca97697ef769af6cef450455c34a1acd8f32b3ece2a230b586caf3a7",
+  "dependency_versions": {
+    "Pillow": "13.0.0",
+    "ReportLab": "4.4.9"
+  },
+  "verification": {
+    "unit_tests": {
+      "command": "python3 -m unittest discover -s tests -v",
+      "passed": 21,
+      "scope": "10 existing connectivity tests and 11 radar topology/clearance/export tests"
+    },
+    "radar_validation": {
+      "result": "pass",
+      "boards": 1,
+      "module_header_pins_checked": 20,
+      "wires_checked": 11,
+      "occupied_holes_checked": 48,
+      "required_connection_groups_checked": 7,
+      "checks": [
+        "all exposed header pins",
+        "breadboard strip connectivity",
+        "unique hole occupancy",
+        "intended net separation",
+        "required paths",
+        "passives not treated as shorts",
+        "drawing route bounds",
+        "one declared power source"
+      ],
+      "not_verified": [
+        "Actual radar TX high/low, startup peaks and C/R input threshold; public data lacks VOH/VOL/VIH",
+        "Actual MCU VDD and radar USB 5V under load",
+        "Capacitor body <=5.5 x 5.5mm assumed; form leads and check clearance",
+        "Resistor lead bends, header housings and actual USB socket fit",
+        "No hardware, firmware, BLE or RF bench test has been performed"
+      ],
+      "source_sha256": "c0f92455ca97697ef769af6cef450455c34a1acd8f32b3ece2a230b586caf3a7"
+    },
+    "existing_slider_svg": "Regenerated SVG is byte-for-byte identical to the previously committed preview",
+    "visual_review": [
+      "Inspected generated Pillow PNG",
+      "Inspected separate Poppler render of generated PDF"
+    ],
+    "diff_check": "git diff --check passed"
+  },
+  "corrections_from_prior_mockup": [
+    "W3 tap moved H4 -> G3, same electrical net",
+    "J4 return moved E1 -> B1, same ground net",
+    "R1 body offset 0.5mm downward from its lead-hole row"
+  ],
+  "limitations": [
+    "Connectivity checks model the completed assembly; W3 is left unplugged during initial voltage measurements",
+    "Drawings and endpoint checks are not a mechanical fit guarantee",
+    "Sensor UART voltage/RX threshold, startup, current budget and function require hardware measurements",
+    "No firmware implemented or hardware/BLE/RF behavior bench-tested"
+  ]
+}

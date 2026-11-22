@@ -1,0 +1,21 @@
+Instance,Pin,Hole,Intended net
+nrf,GND_A,B:C8,GND
+nrf,P1.10,B:C9,unused
+nrf,P1.13,B:C10,unused
+nrf,P1.15,B:C11,unused
+nrf,P0.02,B:C12,unused
+nrf,P0.29,B:C13,unused
+nrf,P0.31,B:C14,unused
+nrf,GND_B,B:C15,GND
+nrf,VDD_OUT,B:C16,LOGIC_VDD
+nrf,VBUS,B:C17,USB_5V
+nrf,GND_C,B:G8,GND
+nrf,P0.10,B:G9,unused
+nrf,P0.09,B:G10,unused
+nrf,P1.00,B:G11,unused
+nrf,P0.24,B:G12,unused
+nrf,P0.22,B:G13,unused
+nrf,P0.20,B:G14,unused
+nrf,P0.17,B:G15,unused
+nrf,P0.15,B:G16,MCU_TX
+nrf,P0.13,B:G17,MCU_RX

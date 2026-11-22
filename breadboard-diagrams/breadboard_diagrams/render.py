@@ -46,8 +46,9 @@ class Scene:
         self.elements.append(dict(kind="circle", x=x, y=y, radius=radius,
                                   fill=fill, stroke=stroke, sw=sw))
 
-    def path(self, points, color, width=1):
-        self.elements.append(dict(kind="path", points=list(points), color=color, width=width))
+    def path(self, points, color, width=1, dash=None):
+        self.elements.append(dict(kind="path", points=list(points), color=color, width=width,
+                                  dash=dash))
 
     def text(self, x, y, value, size=20, color=INK, weight="regular", anchor="start"):
         self.elements.append(dict(kind="text", x=x, y=y, value=str(value), size=size,
@@ -67,7 +68,8 @@ class Scene:
                     lines.append(f'<circle cx="{e["x"]}" cy="{e["y"]}" r="{e["radius"]}" {style}/>')
             elif kind == "path":
                 points = " ".join(f"{x},{y}" for x, y in e["points"])
-                lines.append(f'<polyline points="{points}" fill="none" stroke="{e["color"]}" stroke-width="{e["width"]}" stroke-linecap="round" stroke-linejoin="round"/>')
+                dash = (' stroke-dasharray="' + ' '.join(map(str, e["dash"])) + '"') if e["dash"] else ""
+                lines.append(f'<polyline points="{points}" fill="none" stroke="{e["color"]}" stroke-width="{e["width"]}" stroke-linecap="round" stroke-linejoin="round"{dash}/>')
             else:
                 family = "DejaVu Sans Mono, monospace" if e["weight"] == "mono" else "DejaVu Sans, sans-serif"
                 weight = "700" if e["weight"] == "bold" else "400"
@@ -91,11 +93,12 @@ class Scene:
                 draw.ellipse(box(e["x"] - r, e["y"] - r, 2 * r, 2 * r), fill=e["fill"],
                              outline=e["stroke"], width=max(1, round(e["sw"] * scale)))
             elif e["kind"] == "path":
-                points = [(round(x * scale), round(y * scale)) for x, y in e["points"]]
                 width = max(1, round(e["width"] * scale))
-                draw.line(points, fill=e["color"], width=width, joint="curve")
-                for x, y in points:
-                    draw.ellipse((x-width/2, y-width/2, x+width/2, y+width/2), fill=e["color"])
+                for segment in path_segments(e["points"], e["dash"]):
+                    points = [(round(x * scale), round(y * scale)) for x, y in segment]
+                    draw.line(points, fill=e["color"], width=width, joint="curve")
+                    for x, y in points:
+                        draw.ellipse((x-width/2, y-width/2, x+width/2, y+width/2), fill=e["color"])
             else:
                 key = (e["weight"], round(e["size"] * scale))
                 if key not in fonts:
@@ -138,11 +141,13 @@ class Scene:
                 c.setLineWidth(e["width"])
                 c.setLineCap(1)
                 c.setLineJoin(1)
+                c.setDash(e["dash"] or [])
                 p = c.beginPath()
                 p.moveTo(e["points"][0][0], self.height-e["points"][0][1])
                 for x, y in e["points"][1:]:
                     p.lineTo(x, self.height-y)
                 c.drawPath(p)
+                c.setDash([])
             else:
                 c.setFont("Breadboard-" + e["weight"], e["size"])
                 c.setFillColor(HexColor(e["color"]))
@@ -150,6 +155,31 @@ class Scene:
                 method(e["x"], self.height-e["y"], e["value"])
         c.showPage()
         c.save()
+
+
+def path_segments(points, dash=None):
+    """Keep the PNG dash pattern continuous through polyline corners."""
+    if not dash:
+        yield points
+        return
+    pattern = list(dash) * (2 if len(dash) % 2 else 1)
+    if any(length <= 0 for length in pattern):
+        raise ValueError("Dash lengths must be positive")
+    index, remaining = 0, pattern[0]
+    for a, b in zip(points, points[1:]):
+        dx, dy = b[0]-a[0], b[1]-a[1]
+        length = (dx*dx+dy*dy)**0.5
+        offset = 0
+        while offset < length:
+            step = min(remaining, length-offset)
+            if index % 2 == 0:
+                yield [(a[0]+dx*offset/length, a[1]+dy*offset/length),
+                       (a[0]+dx*(offset+step)/length, a[1]+dy*(offset+step)/length)]
+            offset += step
+            remaining -= step
+            if remaining < 1e-9:
+                index = (index+1) % len(pattern)
+                remaining = pattern[index]
 
 
 def source_hash(circuit):
@@ -167,8 +197,14 @@ def draw_board(scene, circuit, board):
     p = board["pitch"]
     width = definition["column_pitch_units"][-1] * p
     height = (definition["rows"] - 1) * p
-    scene.text(x, y-42, board["label"], 21, weight="bold")
-    scene.rect(x-20, y-20, width+40, height+40, "#FFFFFF", "#A8BCC8", 2, 16)
+    dx, dy = board.get("label_offset", [0, -42])
+    scene.text(x+dx, y+dy, board["label"], 21, weight="bold")
+    if board.get("physical_outline"):
+        scale = p / definition["pitch_mm"]
+        bw, bh = (v*scale for v in definition["dimensions_mm"])
+        scene.rect(x-(bw-width)/2, y-(bh-height)/2, bw, bh, "#FFFFFF", "#A8BCC8", 2, 16)
+    else:
+        scene.rect(x-20, y-20, width+40, height+40, "#FFFFFF", "#A8BCC8", 2, 16)
     scene.rect(x+4.55*p, y-5, 1.9*p, height+10, BG, radius=8)
     for column in definition["columns"]:
         cx, _ = circuit.xy(f'{board["id"]}:{column}1')
@@ -230,6 +266,17 @@ def draw_module(scene, circuit, instance):
 def draw_external(scene, instance):
     x, y = instance["origin"]
     width, height = instance["size"]
+    part = instance["definition"]
+    if part.get("drawing") == "panel":
+        scene.rect(x, y, width, height, part.get("fill", "#DCE6E9"), "#315C58", 2, 16)
+        scene.text(x+width/2, y+42, part["title"], 25, "#FFFFFF", "bold", "middle")
+        for index, text in enumerate(instance.get("detail_lines", [])):
+            scene.text(x+width/2, y+79+index*28, text, 18, "#DBECE7", anchor="middle")
+        for pin, xy in instance["ports"].items():
+            scene.circle(*xy, 6, part.get("port_colors", {}).get(pin, MUTED))
+            label = part.get("pin_labels", {}).get(pin, pin)
+            scene.text(xy[0], xy[1]-13, label, 15, "#FFFFFF", "bold", "middle")
+        return
     scene.rect(x, y, width, height, "#DCE6E9", "#8DA3AF", 2, 20)
     scene.text(x+width/2, y+40, "FADER", 23, INK, "bold", "middle")
     scene.text(x+width/2, y+69, "Adafruit 5466", 16, MUTED, anchor="middle")
@@ -293,6 +340,21 @@ def build_scene(circuit):
             draw_external(scene, instance)
     for passive in data.get("passives", []):
         a, b = circuit.xy(passive["a"]), circuit.xy(passive["b"])
+        drawing = passive.get("drawing")
+        if drawing:
+            cx, cy = drawing.get("body_center", [(a[0]+b[0])/2, (a[1]+b[1])/2])
+            bw, bh = drawing["body_size"]
+            horizontal = drawing.get("orientation", "horizontal") == "horizontal"
+            ends = [(cx-bw/2, cy), (cx+bw/2, cy)] if horizontal else [(cx, cy-bh/2), (cx, cy+bh/2)]
+            for endpoint, via, end in zip((a, b), drawing.get("lead_routes", [[], []]), ends):
+                scene.path([endpoint, *via, end], BG, 6)
+                scene.path([endpoint, *via, end], passive["color"], 2)
+            fill = "#C38D47" if passive["kind"] == "capacitor" else "#E8DEC0"
+            scene.rect(cx-bw/2, cy-bh/2, bw, bh, fill, "#8D7855", 1.5, 5)
+            scene.text(cx, cy+5, drawing.get("label", passive["id"]), drawing.get("font_size", 13), INK, "bold", "middle")
+            for endpoint in (a, b):
+                scene.circle(*endpoint, 5, passive["color"])
+            continue
         scene.path([a, b], passive["color"], 3)
         mid_x, mid_y = (a[0]+b[0])/2, (a[1]+b[1])/2
         scene.rect(mid_x-7, mid_y-20, 14, 40, "#E8DEC0", "#8D875F", 1.5, 5)
@@ -305,7 +367,7 @@ def build_scene(circuit):
         points = circuit.route(wire)
         # A pale halo makes insulated crossings legible. Only endpoints have dots.
         scene.path(points, BG, wire["width"]+5)
-        scene.path(points, wire["color"], wire["width"])
+        scene.path(points, wire["color"], wire["width"], wire.get("dash"))
         for endpoint in (points[0], points[-1]):
             scene.circle(*endpoint, 6, wire["color"], "#FFFFFF", 1)
         if "badge" in wire:
@@ -316,10 +378,17 @@ def build_scene(circuit):
     # where an insulated pigtail crosses the outside numbering margin.
     for board in circuit.boards.values():
         x, y = board["origin"]
+        right_side = board.get("row_labels_side") == "right"
+        label_x = x + board["definition"]["column_pitch_units"][-1]*board["pitch"]+68 if right_side else x-27
         for row in range(1, board["definition"]["rows"]+1):
             cy = y+(row-1)*board["pitch"]
-            scene.rect(x-47, cy-9, 24, 19, BG, radius=2)
-            scene.text(x-27, cy+5, str(row), 12, MUTED, "mono", "end")
+            scene.rect(label_x-20, cy-9, 24, 19, BG, radius=2)
+            scene.text(label_x, cy+5, str(row), 12, MUTED, "mono", "end")
+        if board.get("column_label_knockouts"):
+            for column in board["definition"]["columns"]:
+                cx, _ = circuit.xy(f'{board["id"]}:{column}1')
+                scene.rect(cx-10, y-43, 20, 20, BG, radius=2)
+                scene.text(cx, y-28, column, 14, MUTED, "bold", "middle")
     scene.text(95, 1365, "TOP VIEW", 18, INK, "bold")
     scene.text(95, 1394, "Gold pads = module pins.", 17, MUTED)
     scene.text(95, 1423, "Crossings without dots do not join.", 17, MUTED)
@@ -367,7 +436,8 @@ def export(circuit_path, output_directory, formats=("svg", "png", "pdf"), png_sc
         for wire in circuit.data.get("wires", []):
             writer.writerow([wire["id"], wire["label"], wire["from"], wire["to"], wire.get("pins", ""), ""])
         for passive in circuit.data.get("passives", []):
-            writer.writerow([passive["id"], passive["kind"], passive["a"], passive["b"], "", str(passive.get("ohms", ""))+" ohm"])
+            value = passive.get("value", str(passive["ohms"])+" ohm" if "ohms" in passive else "")
+            writer.writerow([passive["id"], passive["kind"], passive["a"], passive["b"], "", value])
     files.append(str(wiring_path.resolve()))
     pins_path = output / f"{name}.pinmap.csv"
     with pins_path.open("w", newline="") as stream:

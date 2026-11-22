@@ -54,6 +54,26 @@ Component bodies are stylized, not exact mechanical envelopes.
 same Nordic and breadboard definitions without modifying the renderer. Run it
 with the same command, changing only the input JSON path.
 
+The one-board radar build is `circuits/radar-one-board.json`; its remote sensor
+is defined once in `parts/dfrobot-sen0610.json`. Run:
+
+```sh
+python3 -m breadboard_diagrams circuits/radar-one-board.json --out output/radar
+python3 -m breadboard_diagrams circuits/radar-one-board.json --check
+```
+
+![One-board remote radar](examples/radar-one-board.svg)
+
+External parts can select `drawing: "panel"` in their part definition, with
+titles, pin labels and port colours. An instance provides its schematic port
+positions and detail lines. Passives can provide a `drawing` object containing
+`body_center`, `body_size`, `orientation`, `lead_routes` and `label` to show
+horizontal staggered resistors or formed capacitor leads. These drawing routes
+never create conductive junctions; only the component's `a`/`b` holes attach it
+to the electrical model. Optional wire `dash` lengths mark a connection to fit
+after a bench check. The checker validates the complete intended assembly, not
+its intermediate disconnected bring-up state.
+
 Copy a circuit JSON for the next build. A breadboard origin and pitch set its
 visual position. Hole references such as `L:B17` resolve through the board
 definition. Component references such as `nrf.VBUS` resolve to their occupied
@@ -129,6 +149,72 @@ occupancy, required paths and resistor attachment. It does **not** establish
 USB current compliance, transient behavior, actual plug/housing clearance,
 physical lead fit, firmware behavior or motor operation.
 
+## Radar revision C: one mini, sensor on a pigtail
+
+This build reuses the same PCA10059 and Olimex definitions. The SEN0610 stays
+remote; only the nRF, four 10 kohm resistors and a 100 nF ceramic occupy the
+single mini breadboard. Its USB-A cable supplies the radar from raw VBUS 5 V.
+VDD OUT is only a test point. The sensor's UART mode switch must be set to UART.
+The physical pigtail port order in the illustration is schematic: identify
++, -, D/T and C/R from the board labels and continuity, not cable colour.
+
+| Lead | Sensor function | Breadboard hole |
+|---|---|---|
+| F1 | + / power | B:J5 |
+| F2 | - / ground | B:A1 |
+| F3 | D/T / sensor TX | B:A4 |
+| F4 | C/R / sensor RX | B:J16 |
+
+The generated wiring CSV lists every jumper and passive. Nordic headers remain
+C8-C17 / G8-G17 with USB down. R4/R3/R2/R1 span C-J on rows 1/2/3/4.
+Stagger R4/R2 body centres 3.6 mm left of the span midpoint, R3/R1 3.6 mm
+right. Form R1's body 0.5 mm down from its lead-hole row to give the tap
+header above it more room. C1 leads enter H5/J7; form its body beside rows
+8-9 at the right edge. Check actual capacitor dimensions/lead lengths,
+connector housings, bare leads and USB socket against the drawing before
+fixing the assembly. Breadboard outline and header centres are proportional;
+module bodies remain stylized, not exact mechanical envelopes.
+
+**Two corrections from the earlier Rev B mockup:** W3 now starts at G3 rather
+than H4, on the same divider-tap net. J4 now ends at B1 rather than E1, on the
+same ground net. H4 and E1 lay beneath resistor bodies. Use this source and
+its regenerated diagram instead of the earlier raster's hole map. The MCU
+assignments remain TX=P0.15 and RX=P0.13. The migration does not change the
+voltage-divider circuit or claim that its signal-level assumptions are tested.
+
+### Radar voltage gate and bring-up
+
+R1 is 10 kohm in series with sensor TX. R2+R3+R4 provide 30 kohm to ground;
+W3 taps their junction with R1. The nominal divider ratio is 0.75. A nominal
+3.3 V TX high therefore becomes 2.475 V; with 5% resistors the ratio can span
+0.731-0.768. **This is not a universal 5 V level converter.** A 5 V UART high
+would be too high for the intended 3.0 V MCU supply. Public sensor material
+checked does not specify UART VOH/VOL or C/R RX VIH; actual measurements and
+a successful command/reply on this unit remain necessary.
+
+1. Unpowered, check strips, pin labels and all endpoints. With the sensor
+   unplugged and W3 disconnected at I17, expect about 40 kohm from A4 to
+   ground, and 30 kohm from G3 to ground. Verify no VBUS/VDD/GND short.
+2. Set the radar switch to UART and connect its labelled pigtail. Power only
+   through the dongle USB. Measure A16 versus A15: this revision requires
+   measured VDD of 2.9-3.1 V. Check radar supply J5 versus A1 near USB 5 V.
+3. Keep W3 out at I17. Scope G3 versus A1 through startup and UART activity.
+   Require divided HIGH >= 0.7 x measured VDD + 0.1 V and <= VDD - 0.1 V,
+   LOW <= 0.3 V, and no startup peaks outside 0..VDD. At VDD 3.0 V that HIGH
+   window is 2.2-2.9 V. A DC multimeter alone cannot verify peaks or data.
+   If the gate fails, leave W3 out and revise the interface.
+4. Power off before fitting W3. Firmware contract: TX=P0.15, RX=P0.13,
+   9600 baud, 8 data bits, no parity, 1 stop bit, no flow control, RX pull
+   disabled. Preserve the existing USB DFU bootloader and image offset.
+   Use the official DFRobot_C4001 source for SEN0610 commands. Prove a real
+   command/reply before interpreting occupancy, then verify entry/exit
+   transitions and a power cycle. No firmware is included in this project.
+
+`interface_gate`, `firmware_contract`, `mechanical_notes` and `bench_unknowns`
+in the circuit JSON retain those assumptions for future sessions. The committed
+validation report checks topology; the review evidence records the actual
+checks run and their limits. Neither establishes hardware qualification.
+
 ## Manufacturer references
 
 - [Nordic VBUS and internal regulator](https://docs.nordicsemi.com/r/bundle/ug_nrf52840_dongle/page/ug/nrf52840_dongle/hw_power_internal_regulator.html)
@@ -138,6 +224,10 @@ physical lead fit, firmware behavior or motor operation.
 - [Adafruit TB6612 pinouts](https://learn.adafruit.com/adafruit-tb6612-h-bridge-dc-stepper-motor-driver-breakout/pinouts)
 - [Toshiba TB6612FNG datasheet](https://toshiba.semicon-storage.com/info/TB6612FNG_datasheet_en_20141001.pdf?did=10660&prodName=TB6612FNG)
 - [Adafruit motorized fader 5466](https://www.adafruit.com/product/5466)
+
+- [DFRobot SEN0610 interface](https://wiki.dfrobot.com/sen0610/)
+- [DFRobot C4001 protocol implementation](https://github.com/DFRobot/DFRobot_C4001)
+- [Yageo CFR-25 body dimensions, page 3](https://uploadcdn.oneyac.com/attachments/files/brand_pdf/yageo/E2/B5/YAGEO_CFR_datasheet_2024v3.pdf)
 
 The part drawings and renderer are newly authored. Manufacturer CAD is linked
 for provenance, not copied into the source tree. This README's circuits and

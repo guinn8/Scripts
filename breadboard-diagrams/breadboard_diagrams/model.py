@@ -152,12 +152,13 @@ class Circuit:
             if component["kind"] == "resistor":
                 if component["ohms"] <= 0:
                     errors.append(f'{component["id"]}: resistor must have positive resistance')
+            if component["kind"] in ("resistor", "capacitor"):
                 if self.connected(component["a"], component["b"]):
-                    errors.append(f'{component["id"]}: resistor is bypassed by a conductive path')
+                    errors.append(f'{component["id"]}: {component["kind"]} is bypassed by a conductive path')
                 if "required_between" in component:
                     a, b = component["required_between"]
                     if not (self.connected(component["a"], a) and self.connected(component["b"], b)):
-                        errors.append(f'{component["id"]}: resistor does not join intended nets')
+                        errors.append(f'{component["id"]}: {component["kind"]} does not join intended nets')
         for wire in self.data.get("wires", []):
             for x, y in self.route(wire):
                 if not (0 <= x <= self.data["canvas"][0] and 0 <= y <= self.data["canvas"][1]):
